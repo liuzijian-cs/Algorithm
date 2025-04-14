@@ -1,0 +1,2 @@
+# algorithm
+Algorithm problem solviny.
