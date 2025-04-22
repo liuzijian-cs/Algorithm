@@ -6,7 +6,7 @@ AccessModifierOffset: -4
 AlignConsecutiveAssignments: false
 AlignConsecutiveDeclarations: false
 AlignOperands: true
-AlignTrailingComments: false
+AlignTrailingComments: true  # 注释对齐
 AlwaysBreakTemplateDeclarations: Yes
 BraceWrapping: 
   AfterCaseLabel: false
@@ -40,7 +40,7 @@ IncludeCategories:
     Priority: 3
 IncludeIsMainRegex: '([-_](test|unittest))?$'
 IndentCaseLabels: true
-IndentWidth: 4
+IndentWidth: 4  # 每层缩进的空格数，建议 4 更清晰
 InsertNewlineAtEOF: true
 MacroBlockBegin: ''
 MacroBlockEnd: ''
@@ -54,5 +54,19 @@ SpacesInAngles: false
 SpacesInConditionalStatement: false
 SpacesInCStyleCastParentheses: false
 SpacesInParentheses: false
-TabWidth: 4
+TabWidth: 4  # Tab 对应的宽度
+
+SpaceBeforeAssignmentOperators: true
+SpacesInSquareBrackets: false
+SpacesInContainerLiterals: false
+SpaceBeforeParens: ControlStatements
+
+
+UseTab: Never  # 不使用 tab，统一使用空格
+SeparateDefinitionBlocks: Always  # 类定义后空行分隔
+
+
+
+
+
 ...

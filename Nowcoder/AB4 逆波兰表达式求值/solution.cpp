@@ -56,6 +56,5 @@ int main() {
     assert(sol.evalRPN(tokens2) == 2); // 断言结果应为 2 (Assert the result should be 2)
     cout << "Case 1: Successful!" << endl;
 
-
     return 0;
 }
