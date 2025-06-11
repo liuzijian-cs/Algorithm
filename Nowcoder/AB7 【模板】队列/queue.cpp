@@ -6,23 +6,23 @@
 
 using namespace std;
 
-class node {
+class Node {
 public:
     int data;
-    node *next = nullptr;
+    Node *next = nullptr;
 
-    node(int data) { this->data = data; }
+    Node(int data) { this->data = data; }
 
     int get_data() { return this->data; }
 };
 
 class queue {
 private:
-    node *pfront = nullptr; // Front pointer (head)
-    node *prear = nullptr;  // Rear pointer (tail)
+    Node *pfront = nullptr; // Front pointer (head)
+    Node *prear = nullptr;  // Rear pointer (tail)
 public:
     void push(int data) {
-        node *new_node = new node(data);
+        Node *new_node = new Node(data);
         if (pfront == nullptr) {
             pfront = new_node;
             prear = new_node;
@@ -42,7 +42,7 @@ public:
                 free(pfront);
                 pfront = prear = nullptr;
             } else {
-                node *temp = pfront;
+                Node *temp = pfront;
                 pfront = pfront->next;
                 free(temp);
             }
