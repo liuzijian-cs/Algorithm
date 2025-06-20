@@ -18,7 +18,8 @@ public:
         // 思路：
         // 遍历整个nums
 
-        unordered_map<int, int> hashmap; // std::map 的底层实现通常是 红黑树（Red-Black Tree，一种自平衡二叉搜索树）。
+        unordered_map<int, int> hashmap;  // unordered_map
+        // std::map 的底层实现通常是 红黑树（Red-Black Tree，一种自平衡二叉搜索树）。
         // 每次插入、查找、删除操作，最坏情况下的时间复杂度都是 O(log n)，其中 n 是 map 中的元素个数。
 
         // 扩展：如果是 unordered_map 呢？
