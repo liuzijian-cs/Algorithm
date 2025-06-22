@@ -65,6 +65,12 @@ SpaceBeforeParens: ControlStatements
 UseTab: Never  # 不使用 tab，统一使用空格
 SeparateDefinitionBlocks: Always  # 类定义后空行分隔
 
+#AllowShortIfStatementsOnASingleLine: true
+#AllowShortLoopsOnASingleLine: true
+AllowShortIfStatementsOnASingleLine: AllIfsAndElse
+AllowShortLoopsOnASingleLine: true
+AllowShortBlocksOnASingleLine: true
+
 
 
 
