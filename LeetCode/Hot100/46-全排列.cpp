@@ -29,12 +29,55 @@
 #include <vector>
 using namespace std;
 
+// 全排列，复习1：20250625
+// 100% - 84.64%
+class Solution {
+public:
+    vector<vector<int>> permute(vector<int> &nums) {
+        vector<vector<int>> result;
+        if (nums.empty()) return result;
+        if (nums.size() == 1) {
+            result.push_back(nums);
+            return result;
+        }
+
+        dfs(nums,result);
+        return result;
+    }
+
+private:
+    int mask = 0;
+    vector<int> path;
+
+    void dfs(vector<int> &nums, vector<vector<int>> &result) {
+        // 递归出口
+        if (path.size() == nums.size()) {
+            result.push_back(path);
+            return;
+        }
+
+        for (int i = 0; i < nums.size(); i++) {
+            if (mask & (1<<i)) continue;
+            mask |= (1 << i);
+            path.push_back(nums[i]);
+
+            dfs(nums, result);
+
+            mask &= ~(1 << i);
+            // 0001
+            // 1110
+            // 0000
+            path.pop_back();
+        }
+    }
+};
+
 // dfs: 100% - 49.53%
 class Solution {
 public:
     vector<vector<int>> permute(vector<int> &nums) {
         if (nums.empty()) return vector<vector<int>>();
-        used.resize(nums.size(), false);
+        used.resize(nums.size(), false);465
         dfs(nums);
         return result;
     }
