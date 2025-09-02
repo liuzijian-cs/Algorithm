@@ -1,0 +1,5 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/zane/Code/Algorithm/testcpp'
+relocations:     []
+...
